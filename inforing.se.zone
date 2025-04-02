@@ -1,0 +1,26 @@
+$ORIGIN inforing.se.
+$TTL 86400  ; minimum TTL from SOA
+@       IN SOA  boll.ip.se. msb.ip.se. (
+                2023010728 ; serial
+                21600 ; refresh
+                3600 ; retry
+                604800 ; expire
+                86400 ; minimum TTL
+                )
+
+_dmarc.inforing.se.  IN TXT   "v=DMARC1; p=reject"
+dkim._domainkey.inforing.se. IN CNAME  dkim.egensajt.se.
+inforing.se.         IN A      46.21.96.58
+inforing.se.         IN AAAA   2a02:750:12::80
+inforing.se.         IN MX    10 mx1.egensajt.se.
+inforing.se.         IN MX    10 mx2.egensajt.se.
+inforing.se.         IN MX    20 mx3.egensajt.se.
+inforing.se.         IN MX    30 mx4.egensajt.se.
+inforing.se.         IN NS    ball.ip.se.
+inforing.se.         IN NS    bell.ip.se.
+inforing.se.         IN NS    bill.ip.se.
+inforing.se.         IN NS    boll.ip.se.
+inforing.se.         IN NS    bull.ip.se.
+inforing.se.         IN TXT   "v=spf1 include:spf.egensajt.se ~all"
+stenspade.inforing.se. IN A      1.2.3.4
+www.inforing.se.     IN CNAME  inforing.se.
