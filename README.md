@@ -2,13 +2,14 @@
 A tool in Python for performing Zone Walking using NSEC posts, developed as a fun side project for the course DVGC28 at Karlstad University
 
 ## Requirements
+Python - dnspython module:
 ```bash
 pip install dnspython
 ```
 
 ## Usage
 ```bash
-python3 ./zonewalk.py -d <domain> -n <nameserver>
+./zonewalk.py -d <domain> -n <nameserver>
 ```
 Works best if the nameserver is the authourative one for the starting domain;
 The tool will figure out the rest of the nameservers needed for walking any nodes further down.
